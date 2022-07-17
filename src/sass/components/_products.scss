@@ -31,7 +31,7 @@
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #d41443;
+  color: $primary-color;
   margin-bottom: 144px;
   @include mq(tablet) {
     margin-bottom: 160px;
@@ -237,7 +237,7 @@
   cursor: pointer;
   &:hover,
   &:focus {
-    background: #d41443;
+    background: $primary-color;
     .products-list__icon {
       color: white;
     }
@@ -247,7 +247,7 @@
 .products-list__icon {
   display: block;
   margin: 0 auto;
-  color: #d41443;
+  color: $primary-color;
   fill: currentColor;
   width: 20px;
   height: 20px;

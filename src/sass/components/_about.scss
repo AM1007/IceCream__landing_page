@@ -1,42 +1,36 @@
 .section-about {
-    padding-top: 125px;
-    padding-bottom: 20px;
-  
-    background-color: rgb(255, 245, 246);
-  
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0px 720px;
+  padding-top: 125px;
+  padding-bottom: 20px;
 
-// Размер  от 320
+  background-color: rgb(255, 245, 246);
 
-@media (min-width: 320px) {
-    background-image: url('../images/about/milk-m.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0px 720px;
+
+  // Размер  от 320
+
+  @include mq(mobile) {
+    background-image: url("../images/about/milk-m.png");
 
     // Размер  от 1200px retina
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/about/milk-m@2x.png');
+    @include mq(retina) {
+      background-image: url("../images/about/milk-m@2x.png");
     }
   }
 
   // Размер  от 1200px
-  @media (min-width: 1200px) {
+  @include mq(desktop) {
     background-position: 0px 370px;
-    background-image: url('../images/about/milk-d.png');
+    background-image: url("../images/about/milk-d.png");
 
     // Размер  от 1200px retina
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url('../images/about/milk-d@2x.png');
+    @include mq(mobile) {
+      background-image: url("../images/about/milk-d@2x.png");
     }
   }
 
-  @include mq(tablet-only) {
+  @include mq(tablet) {
     padding-top: 130px;
     padding-bottom: 33px;
   }
@@ -45,168 +39,165 @@
     padding-top: 125px;
     padding-bottom: 20px;
   }
-
 }
 .title {
-    color: $accent-color;
-    
-    font-family:'Titan One', cursive ;
-    font-size: 34px;
-    line-height: 1.147;
-    letter-spacing: 0.04em;
-    text-align: center;
-    text-transform: uppercase;
-  
-    @include mq(tablet) {
-      font-size: 48px;
-    }
-  
-    @include mq(desktop) {
-      font-size: 58px;
-    }
-  }
-  .label {
-    margin-bottom: 15px;
-    color:#FFA5BA;
+  color: $accent-color;
 
-    font-family: 'Titan One', cursive;
-    font-size: 18px;
-    line-height: 1.16;
-    text-align: center;
-    text-transform: uppercase;
-  
-    @include mq(tablet) {
-      font-size: 26px;
-      line-height: 1.15;
-    }
-  
-    @include mq(desktop) {
-      font-size: 30px;
-      line-height: 1.13;
-    }
+  font-family: "Titan One", cursive;
+  font-size: 34px;
+  line-height: 1.147;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include mq(tablet) {
+    font-size: 48px;
   }
 
+  @include mq(desktop) {
+    font-size: 58px;
+  }
+}
+.label {
+  margin-bottom: 15px;
+  color: #ffa5ba;
+
+  font-family: "Titan One", cursive;
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include mq(tablet) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  @include mq(desktop) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
 
 .section-about .title {
-    margin-bottom: 26px;
-  
-    @include mq(tablet-only) {
-      margin-bottom: 50px;
-    }
-  
-    @include mq(desktop) {
-      margin-bottom: 55px;
-    }
-  }
-  .about {
-    @include mq(tablet) {
-      display: flex;
-    }
-  }
-  
-  .about__icon {
-    @include mq(tablet-only) {
-      width: 340px;
-      height: 339px;
-    }
-    @include mq(desktop) {
-      width: 516px;
-      height: 516px;
-    }
-  }
-  
-  .about-discription {
-    margin-top: 45px;
-    @include mq(tablet-only) {
-      width: 340px;
-      margin-left: 17px;
-    }
-    @include mq(desktop) {
-      width: 463px;
-      margin-left: 74px;
-    }
-  }
-  
-  .about-discription__title {
-    margin-bottom: 35px;
-    font-size: 12px;
-    line-height: 1.62;
-    color: $black-text-color;
-  
-    @include mq(tablet-only) {
-      font-size: 14px;
-      line-height: 1.76;
-    }
-  
-    @include mq(desktop) {
-      font-size: 16px;
-      line-height: 1.76;
-    }
-  }
-  .about-discription__list {
-    margin-bottom: 25px;
-    @include mq(tablet-only) {
-      margin-bottom: 62px;
-    }
-    @include mq(desktop) {
-      margin-bottom: 45px;
-    }
-  }
-  
-  .about-discription__item:not(:last-child) {
-    margin-bottom: 20px;
-  
-    @include mq(tablet-only) {
-      margin-bottom: 25px;
-    }
-    @include mq(desktop) {
-      margin-bottom: 44px;
-    }
-  }
-  
-  .about-discription__text {
-    font-size: 12px;
-    line-height: 1.62;
-    color: $grey-text-color;
-    
-    @include mq(tablet-only) {
-      font-size: 14px;
-      line-height: 1.76;
-    }
-  
-    @include mq(desktop) {
-      font-size: 16px;
-      line-height: 1.94;
-    }
+  margin-bottom: 26px;
+
+  @include mq(tablet) {
+    margin-bottom: 50px;
   }
 
-  .btn {
-    &-lm {
-        background-color: $bg-color;
-        color:$accent-color;
-        transition: background-color $transition ;
-
-        &:hover,
-        &:focus {
-            background-color:  $button-hover-color;
-
-        }
-    } 
-    min-height: 44px;
-    padding-right: 35px;
-    padding-left: 35px;
-
-    text-align: center;
-
-    border: none;
-    border-radius: 22px;
-
-    cursor: pointer;
+  @include mq(desktop) {
+    margin-bottom: 55px;
+  }
 }
-  // Кнопка
-.about-discription .btn {
-    @include fontButton();
-    // font-weight: 700;
-    // font-size: 16px;
-    // line-height: 1.31;
+.about {
+  @include mq(tablet) {
+    display: flex;
   }
+}
+
+.about__icon {
+  @include mq(tablet) {
+    width: 340px;
+    height: 339px;
+  }
+  @include mq(desktop) {
+    width: 516px;
+    height: 516px;
+  }
+}
+
+.about-description {
+  margin-top: 45px;
+  @include mq(tablet) {
+    width: 340px;
+    margin-left: 17px;
+  }
+  @include mq(desktop) {
+    width: 463px;
+    margin-left: 74px;
+  }
+}
+
+.about-description__title {
+  margin-bottom: 35px;
+  font-size: 12px;
+  line-height: 1.62;
+  color: $black-text-color;
+
+  @include mq(tablet) {
+    font-size: 14px;
+    line-height: 1.76;
+  }
+
+  @include mq(desktop) {
+    font-size: 16px;
+    line-height: 1.76;
+  }
+}
+.about-description__list {
+  margin-bottom: 25px;
+  @include mq(tablet) {
+    margin-bottom: 62px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 45px;
+  }
+}
+
+.about-description__item:not(:last-child) {
+  margin-bottom: 20px;
+
+  @include mq(tablet) {
+    margin-bottom: 25px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 44px;
+  }
+}
+
+.about-description__text {
+  font-size: 12px;
+  line-height: 1.62;
+  color: $grey-text-color;
+
+  @include mq(tablet) {
+    font-size: 14px;
+    line-height: 1.76;
+  }
+
+  @include mq(desktop) {
+    font-size: 16px;
+    line-height: 1.94;
+  }
+}
+
+.btn {
+  &-lm {
+    background-color: $bg-color;
+    color: $accent-color;
+    transition: background-color $transition;
+
+    &:hover,
+    &:focus {
+      background-color: $button-hover-color;
+    }
+  }
+  min-height: 44px;
+  padding-right: 35px;
+  padding-left: 35px;
+
+  text-align: center;
+
+  border: none;
+  border-radius: 22px;
+
+  cursor: pointer;
+}
+// Кнопка
+.about-description .btn {
+  @include fontButton();
+  // font-weight: 700;
+  // font-size: 16px;
+  // line-height: 1.31;
+}
