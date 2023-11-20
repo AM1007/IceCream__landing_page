@@ -2,10 +2,10 @@
   "name": "ice_cream__landing_page",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://am1007.github.io/ice_cream__landing_page/",
+  "homepage": "https://am1007.github.io/IceCream_landing_page/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /ice_cream__landing_page/"
+    "build": "parcel build src/*.html --public-url /IceCream_landing_page/"
   },
   "repository": {
     "type": "git",
