@@ -2,7 +2,7 @@
   "name": "parcel-project-group-21",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://github.com/AM1007/IceCream_landing_page",
+  "homepage": "https://am1007.github.io/IceCream_landing_page/",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /parcel-project-group-21/"
